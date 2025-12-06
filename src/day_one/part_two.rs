@@ -1,30 +1,8 @@
 use std::fs;
 
-pub fn solve_part_one() -> i32 {
-  let file_path = "./src/static/input.txt";
-  let file_content = fs::read_to_string(file_path);
 
-  let mut position: i32 = i32::from(50);
-  let mut count: i32 = 0;
-
-  if let Ok(content) = file_content {
-    let operations: Vec<&str> = content.lines().collect();
-    for op in operations {
-      let dir = &op[0..1];
-      let to_be_moved: i32 = op[1..].parse().expect("failed to parse to_be_moved");
-      let (_, pos) = self::move_postion(position, to_be_moved, dir);
-      if pos == 0 {
-        count += 1;
-      }
-      position = pos
-    }
-  }
-  return count;
-}
-
-
-pub fn solve_part_two() -> i32 {
-  let file_path = "./src/static/input.txt";
+pub fn solution() -> i32 {
+  let file_path = "./src/static/input_part_one.txt";
   let content = fs::read_to_string(file_path).expect("failed to read the file");
 
   let mut position: i32 = i32::from(50);

@@ -1,6 +1,10 @@
 mod day_one;
+mod day_two;
 
 fn main() {
-    let zero_count = day_one::solve_part_one();
-    println!("The answer to part one is: {}", zero_count);
+    let part_two_response = day_two::part_one::solution();
+    match part_two_response {
+        Ok(res) => println!("Day Two - Part One Solution: {}", res),
+        Err(err) => println!("Failed to process: {}", err)
+    }
 }
