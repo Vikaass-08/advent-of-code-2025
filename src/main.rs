@@ -7,11 +7,12 @@ mod day_six;
 mod day_seven;
 mod day_eight;
 mod day_nine;
+mod day_ten;
 
 fn main() {
-    let part_two_response = day_nine::part_one::solution();
+    let part_two_response = day_ten::part_one::solution();
     match part_two_response {
-        Ok(res) => println!("Day Nine - Part One Solution: {}", res),
+        Ok(res) => println!("Day Ten - Part One Solution: {}", res),
         Err(err) => println!("Failed to process: {}", err)
     }
 }
